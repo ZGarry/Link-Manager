@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Link Manager</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #advanced-settings {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Link Manager</h1>
+
+    <form id="add-link-form">
+        <label for="title">标题:</label>
+        <input type="text" id="title" name="title">
+        <label for="url">地址:</label>
+        <input type="text" id="url" name="url">
+        <label for="category">类目:</label>
+        <input type="text" id="category" name="category">
+        <input type="submit" value="增加链接">
+    </form>
+    <button id="toggle-settings">高级设置</button>
+    <div id="advanced-settings">
+        <button id="export-links">导出链接</button>
+        <input type="file" id="import-links" accept=".json">
+    </div>
+    <div id="links"></div>
+
+    <script src="links.js"></script>
+</body>
+
+</html>
